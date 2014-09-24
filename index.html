@@ -1,26 +1,103 @@
 <!doctype html>
 <head>
-	<title></title>
-	<style>
-	body {
-		font-family: "Helvetica Neue", Arial, sans-serif;
-		font-weight: 300;
-	}
-	h1 {
-		font-weight: 300;
-		font-size: 5.0em;
-		text-align: center;
-	}
-	.red {
-		color: #c21c02;
-	}
-	.gray {
-		color: #333;
-	}
-	</style>
+	<title>RedbirdHacks</title>
+	<link href="styles/output.css" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>
+$(document).ready(function(){
+	// Cache the Window object
+	$window = $(window);
+                
+   $('section[data-type="background"]').each(function(){
+     var $bgobj = $(this); // assigning the object
+                    
+      $(window).scroll(function() {
+                    
+		// Scroll the background at var speed
+		// the yPos is a negative value because we're scrolling it UP!								
+		var yPos = -($window.scrollTop() / $bgobj.data('speed')); 
+		
+		// Put together our final background position
+		var coords = '50% '+ yPos + 'px';
+
+		// Move the background
+		$bgobj.css({ backgroundPosition: coords });
+		
+}); // window scroll Ends
+
+ });	
+
+}); 
+
+	</script>
 </head>
 <body>
-	<h1><span class="red">Redbird</span><span class="gray">Hacks</span></h1>
+	<section id="hero" data-type="background" data-speed="10">
+		<article>
+			<h1><span class="red">Redbird</span><span class="gray">Hacks</span></h1>
+			<p class="subhead">Illinois State's first university hackathon.</p>
+			<p style="margin-top: 40px;"><a href="#contact" class="email">Stay Updated</a></p>
+	<!--<p style="margin-top: 40px;"><a href="#register" class="register">Register</a></p>-->
+		</article>
+	</section>
 
+	<h2 id="faqs">FAQs</h2>
+	<section>
+		<div class="row">
+			<div class="col33">
+				<h3>What is RedbirdHacks?</h3>
+				<p>RedbirdHacks is ISU's first university hackathon for undergraduates to prototype, program, and pitch their ideas to corporate sponsors in an entrepreneurial fashion, connecting Arts Technology, Information Technology, and Business students to cultivate innovation and collaboration to empower all students.</p>
+			</div>
+			<div class="col33">
+				<h3>What is a hackathon?</h3>
+			</div>
+			<div class="col33">
+				<h3>What is a hackathon?</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col33">
+				<h3>Who can participate in RedbirdHacks?</h3>
+			</div>
+			<div class="col33">
+				<h3>What do I need to bring?</h3>
+			</div>
+			<div class="col33">
+				<h3>What do I need to bring?</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col33">
+				<h3>Will there be showers provided?</h3>
+			</div>
+			<div class="col33">
+				<h3>How much does it cost to participate?</h3>
+			</div>
+			<div class="col33">
+				<h3>What do I need to bring?</h3>
+			</div>
+		</div>
+	</section>
+
+	<h2 id="sponsors">Sponsors (coming soon)</h2>
+	<div class="row center sponsors">
+		<img src="images/isu-logo.png" alt="Illinois State University Logo">
+	</div>
+
+	<section id="contact" data-type="background" data-speed="10">
+		<article class="transparent">
+			<h2>Contact Us</h2>
+			<form id="contact-form">
+				
+			</form>
+		</article>
+	</section>
+<!--
+	<footer id="foot" data-type="background" data-speed="10">
+		<article>
+			<p>Contact Us <a href="mailto:redbirdhacks@ilstu.edu">redbirdhacks@ilstu.edu</a></p>
+		</article>
+	</footer>
+-->
 </body>
 </html>
