@@ -13,6 +13,20 @@ body
 	margin: 0
 	padding: 0
 
+button
+	background-color: $redbird-red
+	height: 35px
+	width: 110px
+	border: none
+	color: #fff
+	border-radius: 4px
+	font-size: 1.0em
+	font-weight: normal
+	padding: 5px
+
+footer
+	height: 300px
+
 h1
 	font-weight: 300
 	font-size: 7.0em
@@ -32,30 +46,42 @@ h3
 	font-size: 2.0em
 	text-align: center
 
+img
+	height: auto
+	max-width: 100%
+	
+input
+	height: 32px
+	width: 400px
+	opacity: 0.8
+	border-radius: 4px
+	margin-right: 5px
+	border: 1px solid #333
+	font-size: 1.0em
+	padding-left: 10px
+
+p
+	font-size: 1.2em
+
 section
 	clear: both
 	margin: 0
 
-.transparent
-	background-color: #fff
-	height: 200px
-	opacity: 0.4
-
-.center
-	text-align: center
-
 #contact
-	height: 400px
-	background: url('../images/cob-quad-gray-mid.png') no-repeat fixed
+	height: 600px
+	background: url('../images/cob-mid-color.png') no-repeat fixed
 	background-position: center bottom !important
 	position: relative
 
 #hero
 	height: 700px
-	background: url('../images/cob-quad-gray.png') no-repeat fixed
+	background: url('../images/cob.png') no-repeat fixed
 	background-position: center top
 	padding-top: 200px
 	position: relative
+
+#email
+	margin: 10px
 
 #faqs
 	background-color: $redbird-red
@@ -76,38 +102,26 @@ section
 	color: $white
 	padding: 75px 50px 75px 50px
 
-.sponsors
-	margin: 20px
-	display: block
-
-.red
-	color: $redbird-red
-
-.gray
-	color: #333
-
-.row
-	width: 100%
-	clear: both
-	display: table-row
-	margin-left: auto
-	margin-right: auto
+.center
+	text-align: center
 
 .col33
 	width: 33%
 	display: table-cell
+	padding: 10px
+	-webkit-box-sizing: border-box /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box    /* Firefox, other Gecko */
+	box-sizing: border-box     /* Opera/IE 8+ */
 
 .col50
 	width: 5%
 	display: table-cell
 	/* background-color: pink */
 
-.subhead
-	font-size: 2.25em
-	color: #000
-	text-align: center
+.disclaim-signup
+	font-size: 1.0em
 	padding: 0
-	margin: 0
+	margin: 0 0 5px 0
 
 .email
 	color: #fff
@@ -120,6 +134,15 @@ section
 	margin-right: auto
 	text-decoration: none
 
+.faqs
+	margin: 15px
+
+.gray
+	color: #333
+	
+.red
+	color: $redbird-red
+
 .register
 	color: #fff
 	text-align: center
@@ -131,11 +154,25 @@ section
 	margin-right: auto
 	text-decoration: none
 
-input
-	height: 20px
-	width: 200px
+.row
+	width: 100%
+	clear: both
+	display: table-row
+	margin-left: auto
+	margin-right: auto
 
-img
-	height: auto
-	max-width: 100%
+.sponsors
+	margin: 20px
 	display: block
+
+.subhead
+	font-size: 2.0em
+	color: #000
+	text-align: center
+	padding: 0
+	margin: 0
+
+.transparent
+	background-color: #fff
+	height: 200px
+	opacity: 0.4

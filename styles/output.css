@@ -11,6 +11,20 @@ body {
   margin: 0;
   padding: 0; }
 
+button {
+  background-color: #e01b22;
+  height: 35px;
+  width: 110px;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  font-size: 1em;
+  font-weight: normal;
+  padding: 5px; }
+
+footer {
+  height: 300px; }
+
 h1 {
   font-weight: 300;
   font-size: 7em;
@@ -30,30 +44,42 @@ h3 {
   font-size: 2em;
   text-align: center; }
 
+img {
+  height: auto;
+  max-width: 100%; }
+
+input {
+  height: 32px;
+  width: 400px;
+  opacity: 0.8;
+  border-radius: 4px;
+  margin-right: 5px;
+  border: 1px solid #333333;
+  font-size: 1em;
+  padding-left: 10px; }
+
+p {
+  font-size: 1.2em; }
+
 section {
   clear: both;
   margin: 0; }
 
-.transparent {
-  background-color: white;
-  height: 200px;
-  opacity: 0.4; }
-
-.center {
-  text-align: center; }
-
 #contact {
-  height: 400px;
-  background: url("../images/cob-quad-gray-mid.png") no-repeat fixed;
+  height: 600px;
+  background: url("../images/cob-mid-color.png") no-repeat fixed;
   background-position: center bottom !important;
   position: relative; }
 
 #hero {
   height: 700px;
-  background: url("../images/cob-quad-gray.png") no-repeat fixed;
+  background: url("../images/cob.png") no-repeat fixed;
   background-position: center top;
   padding-top: 200px;
   position: relative; }
+
+#email {
+  margin: 10px; }
 
 #faqs {
   background-color: #e01b22;
@@ -74,38 +100,26 @@ section {
   color: white;
   padding: 75px 50px 75px 50px; }
 
-.sponsors {
-  margin: 20px;
-  display: block; }
-
-.red {
-  color: #e01b22; }
-
-.gray {
-  color: #333333; }
-
-.row {
-  width: 100%;
-  clear: both;
-  display: table-row;
-  margin-left: auto;
-  margin-right: auto; }
+.center {
+  text-align: center; }
 
 .col33 {
   width: 33%;
-  display: table-cell; }
+  display: table-cell;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 .col50 {
   width: 5%;
   display: table-cell;
   /* background-color: pink */ }
 
-.subhead {
-  font-size: 2.25em;
-  color: black;
-  text-align: center;
+.disclaim-signup {
+  font-size: 1em;
   padding: 0;
-  margin: 0; }
+  margin: 0 0 5px 0; }
 
 .email {
   color: white;
@@ -118,6 +132,15 @@ section {
   margin-right: auto;
   text-decoration: none; }
 
+.faqs {
+  margin: 15px; }
+
+.gray {
+  color: #333333; }
+
+.red {
+  color: #e01b22; }
+
 .register {
   color: white;
   text-align: center;
@@ -129,11 +152,25 @@ section {
   margin-right: auto;
   text-decoration: none; }
 
-input {
-  height: 20px;
-  width: 200px; }
+.row {
+  width: 100%;
+  clear: both;
+  display: table-row;
+  margin-left: auto;
+  margin-right: auto; }
 
-img {
-  height: auto;
-  max-width: 100%;
+.sponsors {
+  margin: 20px;
   display: block; }
+
+.subhead {
+  font-size: 2em;
+  color: black;
+  text-align: center;
+  padding: 0;
+  margin: 0; }
+
+.transparent {
+  background-color: white;
+  height: 200px;
+  opacity: 0.4; }
