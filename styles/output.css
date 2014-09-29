@@ -11,12 +11,15 @@ body {
   margin: 0;
   padding: 0; }
 
+a {
+  color: #ffffff; }
+
 button {
   background-color: #e01b22;
   height: 35px;
   width: 110px;
   border: none;
-  color: white;
+  color: #fff;
   border-radius: 4px;
   font-size: 1em;
   font-weight: normal;
@@ -37,7 +40,7 @@ h2 {
   text-align: center;
   margin: 0;
   padding: 0;
-  color: white; }
+  color: #fff; }
 
 h3 {
   font-weight: 300;
@@ -54,7 +57,7 @@ input {
   opacity: 0.8;
   border-radius: 4px;
   margin-right: 5px;
-  border: 1px solid #333333;
+  border: 1px solid #333;
   font-size: 1em;
   padding-left: 10px; }
 
@@ -84,7 +87,7 @@ section {
 #faqs {
   background-color: #e01b22;
   clear: both;
-  color: white;
+  color: #fff;
   padding: 75px 50px 75px 50px; }
 
 #foot {
@@ -97,7 +100,7 @@ section {
 #sponsors {
   background-color: #e01b22;
   clear: both;
-  color: white;
+  color: #fff;
   padding: 75px 50px 75px 50px; }
 
 .center {
@@ -122,7 +125,7 @@ section {
   margin: 0 0 5px 0; }
 
 .email {
-  color: white;
+  color: #fff;
   text-align: center;
   font-size: 1.5em;
   background-color: #e01b22;
@@ -136,13 +139,13 @@ section {
   margin: 15px; }
 
 .gray {
-  color: #333333; }
+  color: #333; }
 
 .red {
   color: #e01b22; }
 
 .register {
-  color: white;
+  color: #fff;
   text-align: center;
   font-size: 1.5em;
   background-color: #e01b22;
@@ -165,12 +168,14 @@ section {
 
 .subhead {
   font-size: 2em;
-  color: black;
+  color: #000;
   text-align: center;
   padding: 0;
   margin: 0; }
 
 .transparent {
-  background-color: white;
+  background-color: #fff;
   height: 200px;
   opacity: 0.4; }
+
+/*# sourceMappingURL=output.css.map */
