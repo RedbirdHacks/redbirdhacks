@@ -13,6 +13,15 @@ $(document).ready(function() {
             $("#scrollHint img").fadeOut();
         }
 
+
+        // TODO maybe not in this file!
+        if ($(document).scrollTop() > $('#hero').height()) {
+            $('#main-nav').addClass('affix');
+        }
+        else {
+            $('#main-nav').removeClass('affix');
+        }
+
     });
     $('#scrollHint img').hover(function() {
         $(this).fadeTo(500, .8);
