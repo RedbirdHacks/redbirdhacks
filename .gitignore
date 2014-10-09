@@ -1,3 +1,7 @@
 # file system junk
 .DS_Store
 Thumbs.db
+
+# sass
+.sass-cache
+
