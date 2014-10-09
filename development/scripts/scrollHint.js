@@ -17,9 +17,11 @@ $(document).ready(function() {
         // TODO maybe not in this file!
         if ($(document).scrollTop() > $('#hero').height()) {
             $('#main-nav').addClass('affix');
+            $('#faqs').css('margin-top', $('#main-nav').height());
         }
         else {
             $('#main-nav').removeClass('affix');
+            $('#faqs').css('margin-top', '0');
         }
 
     });
