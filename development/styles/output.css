@@ -12,14 +12,7 @@ body, html {
   font-weight: 300;
   margin: 0px;
   padding: 0px;
-  background: transparent;
   max-width: 100%; }
-
-section.faqs a {
-  color: #e01b22; }
-
-section#sponsors.center a {
-  color: white; }
 
 button {
   background-color: #e01b22;
@@ -78,7 +71,7 @@ section {
 #main-nav {
   width: 100%;
   height: 80px;
-  background-color: rgba(255, 255, 255, 0.95); }
+  background-color: rgba(255, 255, 255, 0.8); }
 
 #main-nav ul {
   margin: 0;
@@ -101,6 +94,12 @@ section {
   top: 0;
   box-shadow: 0 1px 8px #333333; }
 
+section#faq a {
+  color: #e01b22; }
+
+section#sponsors.center a {
+  color: white; }
+
 #contact {
   height: 600px;
   background: url("../images/cob-mid-color.png") no-repeat fixed;
@@ -117,11 +116,14 @@ section {
 #email {
   margin: 10px; }
 
-#faqs {
+#faq h2 {
   background-color: #e01b22;
   clear: both;
   color: white;
   padding: 75px 50px 75px 50px; }
+
+#faq div.faqs {
+  margin: 15px; }
 
 #foot {
   height: 300px;
@@ -178,9 +180,6 @@ section {
   margin-left: auto;
   margin-right: auto;
   text-decoration: none; }
-
-.faqs {
-  margin: 15px; }
 
 .gray {
   color: #333333; }
