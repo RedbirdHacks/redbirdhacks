@@ -18,13 +18,6 @@ body, html
   padding: 0px
   max-width: 100%
 
-*,
-*:before,
-*:after
-  -webkit-box-sizing: border-box
-  -moz-box-sizing: border-box
-  box-sizing: border-box
-
 button
   background-color: $redbird-red
   height: 35px
@@ -83,32 +76,39 @@ section
   width: 100%
   height: 80px
   background-color: $white
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
 
-#main-nav ul
-  margin: 0
-  padding: 0
-  float: right
+  ul
+    margin: 0
+    padding: 0
 
-#main-nav ul li
-  margin: 0
-  padding: 0 18px
-  list-style: none
-  float: left
+    li
+      margin: 0
+      padding: 0 18px
+      list-style: none
+      float: left
 
-#main-nav ul li a
-  font-size: 1.8em
-  text-decoration: none
-  line-height: 76px
-  border-bottom: 4px solid transparent
-  display: block
+      &.nav-top
+        float: right
+        a
+          font-size: 1em
 
-#main-nav ul li a,
-#main-nav ul li a:visited,
-  color: $redbird-red
+      a
+        font-size: 1.8em
+        text-decoration: none
+        line-height: 76px
+        border-bottom: 4px solid transparent
+        display: block
 
-#main-nav ul li a:hover,
-#main-nav ul li a:active
-  border-bottom-color: $redbird-red
+        &,
+        &:visited
+          color: $redbird-red
+
+        &:hover,
+        &:active
+          border-bottom-color: $redbird-red
 
 #main-nav.affix
   position: fixed
