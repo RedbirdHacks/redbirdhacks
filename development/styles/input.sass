@@ -2,6 +2,7 @@
 $redbird-red: #e01b22
 $white: #fff
 $grey: #f8f8f8
+$nav-height: 80px
 
 article
   position: absolute
@@ -17,13 +18,6 @@ body, html
   margin: 0px
   padding: 0px
   max-width: 100%
-
-section.faqs a
-  color: $redbird-red
-
-
-section#sponsors.center a
-  color: $white
 
 button
   background-color: $redbird-red
@@ -79,6 +73,55 @@ section
   clear: both
   margin: 0
 
+#main-nav
+  width: 100%
+  height: $nav-height
+  background-color: $white
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+  ul
+    margin: 0
+    padding: 0
+
+    li
+      margin: 0
+      padding: 0 18px
+      list-style: none
+      float: left
+
+      &.nav-top
+        float: right
+        a
+          font-size: 1em
+
+      a
+        font-size: 1.8em
+        text-decoration: none
+        line-height: 76px
+        border-bottom: 4px solid transparent
+        display: block
+
+        &,
+        &:visited
+          color: $redbird-red
+
+        &:hover,
+        &:active
+          border-bottom-color: $redbird-red
+
+#main-nav.affix
+  position: fixed
+  top: 0
+  box-shadow: 0 1px 8px #333
+
+section#faq a
+  color: $redbird-red
+
+section#sponsors.center a
+  color: $white
+
 #contact
   height: 600px
   background: url('../images/cob-mid-color.png') no-repeat fixed
@@ -95,11 +138,14 @@ section
 #email
   margin: 10px
 
-#faqs
+#faq h2
   background-color: $redbird-red
   clear: both
   color: $white
   padding: 75px 50px 75px 50px
+
+#faq div.faqs
+  margin: 15px
 
 #foot
   height: 300px
@@ -112,7 +158,10 @@ section
   background-color: $redbird-red
   clear: both
   color: $white
-  padding: 75px 50px 75px 50px
+  height: 100%
+
+#sponsors-cta
+  padding: $nav-height + 75px 50px 75px 50px
 
 #scrollHint
   position: absolute
@@ -156,9 +205,6 @@ section
   margin-left: auto
   margin-right: auto
   text-decoration: none
-
-.faqs
-  margin: 15px
 
 .gray
   color: #333
