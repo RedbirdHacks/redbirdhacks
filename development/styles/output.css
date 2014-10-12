@@ -145,7 +145,10 @@ section#sponsors.center a {
   background-color: #e01b22;
   clear: both;
   color: white;
-  padding: 75px 50px 75px 50px; }
+  height: 100%; }
+
+#sponsors-cta {
+  padding: 155px 50px 75px 50px; }
 
 #scrollHint {
   position: absolute;
