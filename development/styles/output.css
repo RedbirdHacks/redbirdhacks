@@ -145,7 +145,7 @@ section#sponsors.center a {
   position: relative; }
 
 #sponsors {
-  background-color: #e01b22;
+  background-color: rgba(224, 27, 34, 0.8);
   clear: both;
   color: white;
   height: 100%; }

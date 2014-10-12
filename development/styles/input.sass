@@ -1,6 +1,8 @@
 /* Styles for RedbirdHacks website */
 $redbird-red: #e01b22
+$redbird-red-transparent: rgba(224, 27, 34, 0.8)
 $white: #fff
+$white-transparent: rgba(255, 255, 255, 0.8)
 $grey: #f8f8f8
 $nav-height: 80px
 
@@ -141,14 +143,14 @@ section#sponsors.center a
   margin: 10px
 
 #faq h2
-  background-color: rgba(224, 27, 34, 0.8)
+  background-color: $redbird-red-transparent
   clear: both
   color: $white
   padding: 75px 50px 75px 50px
 
 #faq div.faqs
   margin: 15px
-  background-color: rgba(255, 255, 255, 0.8)
+  background-color: $white-transparent
 
 #foot
   height: 300px
@@ -158,7 +160,7 @@ section#sponsors.center a
   position: relative
 
 #sponsors
-  background-color: $redbird-red
+  background-color: $redbird-red-transparent
   clear: both
   color: $white
   height: 100%
