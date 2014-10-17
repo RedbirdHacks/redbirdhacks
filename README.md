@@ -9,11 +9,11 @@ RedbirdHacks official website: http://redbirdhacks.org
 
 1. Ensure you are on master
 
-    git checkout master
+        git checkout master
 
 2. Create and switch to a new branch (name it after what the feature is about, examples: fix-auth-bug, add-navbar, refactor-user-model)
 
-    git checkout -b your-branch-name
+        git checkout -b your-branch-name
 
 3. Do your work for this feature on this branch.
 
