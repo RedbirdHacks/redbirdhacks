@@ -25,7 +25,8 @@ Notes:
 
 // TODO
 
-### Merging master to production branch (__ONLY WHEN IT IS STABLE__)
+### Merging master to production branch
+_ONLY DO THIS WHEN MASTER IS STABLE_
 
 // TODO
 
