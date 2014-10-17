@@ -14,18 +14,12 @@ body, html {
   padding: 0px;
   max-width: 100%; }
 
-section.faqs a {
-  color: #e01b22; }
-
-div#sponsors.center a {
-  color: #fff; }
-
 button {
   background-color: #e01b22;
   height: 35px;
   width: 110px;
   border: none;
-  color: #fff;
+  color: white;
   border-radius: 4px;
   font-size: 1em;
   font-weight: normal;
@@ -46,7 +40,7 @@ h2 {
   text-align: center;
   margin: 0;
   padding: 0;
-  color: #fff; }
+  color: white; }
 
 h3 {
   font-weight: 300;
@@ -63,7 +57,7 @@ input {
   opacity: 0.8;
   border-radius: 4px;
   margin-right: 5px;
-  border: 1px solid #333;
+  border: 1px solid #333333;
   font-size: 1em;
   padding-left: 10px; }
 
@@ -73,6 +67,47 @@ p {
 section {
   clear: both;
   margin: 0; }
+
+#main-nav {
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  #main-nav ul {
+    margin: 0;
+    padding: 0; }
+    #main-nav ul li {
+      margin: 0;
+      padding: 0 18px;
+      list-style: none;
+      float: left; }
+      #main-nav ul li.nav-top {
+        float: right; }
+        #main-nav ul li.nav-top a {
+          font-size: 1em; }
+      #main-nav ul li a {
+        font-size: 1.8em;
+        text-decoration: none;
+        line-height: 76px;
+        border-bottom: 4px solid transparent;
+        display: block; }
+        #main-nav ul li a, #main-nav ul li a:visited {
+          color: #e01b22; }
+        #main-nav ul li a:hover, #main-nav ul li a:active {
+          border-bottom-color: #e01b22; }
+
+#main-nav.affix {
+  position: fixed;
+  top: 0;
+  box-shadow: 0 1px 8px #333333; }
+
+section#faq a {
+  color: #e01b22; }
+
+section#sponsors.center a {
+  color: white; }
 
 #contact {
   height: 600px;
@@ -90,11 +125,14 @@ section {
 #email {
   margin: 10px; }
 
-#faqs {
+#faq h2 {
   background-color: #e01b22;
   clear: both;
-  color: #fff;
+  color: white;
   padding: 75px 50px 75px 50px; }
+
+#faq div.faqs {
+  margin: 15px; }
 
 #foot {
   height: 300px;
@@ -106,8 +144,11 @@ section {
 #sponsors {
   background-color: #e01b22;
   clear: both;
-  color: #fff;
-  padding: 75px 50px 75px 50px; }
+  color: white;
+  height: 100%; }
+
+#sponsors-cta {
+  padding: 155px 50px 75px 50px; }
 
 #scrollHint {
   position: absolute;
@@ -142,7 +183,7 @@ section {
   margin: 0 0 5px 0; }
 
 .email {
-  color: #fff;
+  color: white;
   text-align: center;
   font-size: 1.5em;
   background-color: #e01b22;
@@ -152,17 +193,14 @@ section {
   margin-right: auto;
   text-decoration: none; }
 
-.faqs {
-  margin: 15px; }
-
 .gray {
-  color: #333; }
+  color: #333333; }
 
 .red {
   color: #e01b22; }
 
 .register {
-  color: #fff;
+  color: white;
   text-align: center;
   font-size: 1.5em;
   background-color: #e01b22;
@@ -185,14 +223,12 @@ section {
 
 .subhead {
   font-size: 2em;
-  color: #000;
+  color: black;
   text-align: center;
   padding: 0;
   margin: 0; }
 
 .transparent {
-  background-color: #fff;
+  background-color: white;
   height: 200px;
   opacity: 0.4; }
-
-/*# sourceMappingURL=output.css.map */
