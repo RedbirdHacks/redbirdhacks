@@ -36,7 +36,7 @@ _ONLY DO THIS WHEN MASTER IS STABLE_
 
         git merge master
 
-3. There should be no merge conflicts, if there are something is wrong. Find the person who is to blame using Github GUI.
+3. There should be __no__ merge conflicts. If there are conflicts, then something is wrong. Find the person who is to blame using the Github GUI and resolve the conflicts.
 
 4. Push the updated production branch to the server
 
