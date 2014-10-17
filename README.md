@@ -28,5 +28,21 @@ Notes:
 ### Merging master to production branch
 _ONLY DO THIS WHEN MASTER IS STABLE_
 
-// TODO
+1. Ensure you are on production
+
+        git checkout production
+
+2. Merge the master branch into the production branch
+
+        git merge master
+
+3. There should be no merge conflicts, if there are something is wrong. Find the person who is to blame using Github GUI.
+
+4. Push the updated production branch to the server
+
+        git push origin production // if you have set the upstream, just git push will do
+
+5. Switch back to master
+
+        git checkout master
 
