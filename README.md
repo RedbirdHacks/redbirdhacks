@@ -50,11 +50,31 @@ Choose this if you want someone else to review your changes before you merge
 Choose this if you __don't__ want someone else to review your changes before merge
 
 1. Ensure you are on the master branch
+
+        git checkout master
+
 2. Pull down any changes
+
+        git pull
+
 3. Merge your branch into master
+
+        git merge your-branch-name
+
 4. Resolve any merge conflicts
+  - Git will do it's best to automatically merge branches
+  - Any conflicts will be shown to you via `git status`
+  - Fix conflicted files by making them what they should be, i.e. open them in your favorite editor, get rid of the conflicting lines you don't want, and get rid of git's markup `>>>> HEAD`, `<<<<`, etc.
+  - Once a file's conflicts are resolved, `git add` it
+  - If you had to manually resolve conflicts, once you are done you must `git commit` the merge
+
 5. Push master up
-6. Delete your feature branch - it is no longer needed
+
+        git push
+
+6. Delete your feature branch - it is no longer needed, the changes on that branch now live in master
+
+        git branch -d your-branch-name
 
 ### Merging master to production branch
 _ONLY DO THIS WHEN MASTER IS STABLE_
