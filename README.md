@@ -30,15 +30,24 @@ There are two options for merging a branch - via pull request or locally.
 Choose this if you want someone else to review your changes before you merge
 
 1. Ensure you are on your feature branch
+
+        git checkout your-branch-name
+
 2. Push your branch to server
-3. Create a pull request via Github GUI
-4. Wait for review - you may need to make more changes or your branch will be merged in
-5. Delete your feature branch - it is no longer needed
+
+        git push origin your-branch-name (or just git push if your upstream is set)
+
+3. Create a pull request via the Github GUI
+4. Wait for review, start a discussion if necessary, etc.
+  - If the review results in you needing to make more changes - simply make them, commit them, and push again. Pushing commits on your feature branch will update the pull request automatically
+5. Once your pull request is merged, you can delete your feature branch - it is no longer needed
+
+        git branch -d your-branch-name
 
 
 #### Locally
 
-Choose this if you _don't_ want someone else to review your changes before merge
+Choose this if you __don't__ want someone else to review your changes before merge
 
 1. Ensure you are on the master branch
 2. Pull down any changes
