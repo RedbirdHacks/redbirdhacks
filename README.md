@@ -23,7 +23,29 @@ Notes:
 
 ### Merging your feature branch into master
 
-// TODO
+There are two options for merging a branch - via pull request or locally.
+
+#### Via pull request
+
+Choose this if you want someone else to review your changes before you merge
+
+1. Ensure you are on your feature branch
+2. Push your branch to server
+3. Create a pull request via Github GUI
+4. Wait for review - you may need to make more changes or your branch will be merged in
+5. Delete your feature branch - it is no longer needed
+
+
+#### Locally
+
+Choose this if you _don't_ want someone else to review your changes before merge
+
+1. Ensure you are on the master branch
+2. Pull down any changes
+3. Merge your branch into master
+4. Resolve any merge conflicts
+5. Push master up
+6. Delete your feature branch - it is no longer needed
 
 ### Merging master to production branch
 _ONLY DO THIS WHEN MASTER IS STABLE_
