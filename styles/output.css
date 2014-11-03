@@ -19,7 +19,7 @@ button {
   height: 35px;
   width: 110px;
   border: none;
-  color: white;
+  color: #fff;
   border-radius: 4px;
   font-size: 1em;
   font-weight: normal;
@@ -40,7 +40,7 @@ h2 {
   text-align: center;
   margin: 0;
   padding: 0;
-  color: white; }
+  color: #fff; }
 
 h3 {
   font-weight: 300;
@@ -57,7 +57,7 @@ input {
   opacity: 0.8;
   border-radius: 4px;
   margin-right: 5px;
-  border: 1px solid #333333;
+  border: 1px solid #333;
   font-size: 1em;
   padding-left: 10px; }
 
@@ -71,7 +71,7 @@ section {
 #main-nav {
   width: 100%;
   height: 80px;
-  background-color: white;
+  background-color: #fff;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -101,13 +101,13 @@ section {
 #main-nav.affix {
   position: fixed;
   top: 0;
-  box-shadow: 0 1px 8px #333333; }
+  box-shadow: 0 1px 8px #333; }
 
 section#faq a {
   color: #e01b22; }
 
 section#sponsors.center a {
-  color: white; }
+  color: #fff; }
 
 #contact {
   height: 600px;
@@ -128,7 +128,7 @@ section#sponsors.center a {
 #faq h2 {
   background-color: #e01b22;
   clear: both;
-  color: white;
+  color: #fff;
   padding: 75px 50px 75px 50px; }
 
 #faq div.faqs {
@@ -144,7 +144,7 @@ section#sponsors.center a {
 #sponsors {
   background-color: #e01b22;
   clear: both;
-  color: white;
+  color: #fff;
   height: 100%; }
 
 #sponsors-cta {
@@ -160,6 +160,9 @@ section#sponsors.center a {
   background-color: #f8f8f8;
   opacity: 0.6;
   border: 0px; }
+
+.hidden {
+  display: none; }
 
 .center {
   text-align: center; }
@@ -183,7 +186,7 @@ section#sponsors.center a {
   margin: 0 0 5px 0; }
 
 .email {
-  color: white;
+  color: #fff;
   text-align: center;
   font-size: 1.5em;
   background-color: #e01b22;
@@ -194,13 +197,13 @@ section#sponsors.center a {
   text-decoration: none; }
 
 .gray {
-  color: #333333; }
+  color: #333; }
 
 .red {
   color: #e01b22; }
 
 .register {
-  color: white;
+  color: #fff;
   text-align: center;
   font-size: 1.5em;
   background-color: #e01b22;
@@ -223,12 +226,14 @@ section#sponsors.center a {
 
 .subhead {
   font-size: 2em;
-  color: black;
+  color: #000;
   text-align: center;
   padding: 0;
   margin: 0; }
 
 .transparent {
-  background-color: white;
+  background-color: #fff;
   height: 200px;
   opacity: 0.4; }
+
+/*# sourceMappingURL=output.css.map */
