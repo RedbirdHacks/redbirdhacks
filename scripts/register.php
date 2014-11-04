@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     if(isset($_GET['deleteResume'])){
 
         // Get all files in user directory and delete
-        $files = glob('/var/www/html/development/resumes/'.$_SESSION['userPayload']['id'].'/*');
+        $files = glob('/var/www/html/resumes/'.$_SESSION['userPayload']['id'].'/*');
 
         // Clear out the folder
         foreach($files as $file){            
@@ -67,20 +67,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // If no errors with uploading the file, the file has at least 1 byte, and is less than 2MB
     if(!$_FILES['file']['error'] && $_FILES['file']['size'] && $_FILES['file']['size'] <= 2000000){
 
-        $error['OurFile'] = $_FILES['file'];
-
         // See if directory is already there
         // If user directory does not exist
-        if (!file_exists('/var/www/html/development/resumes/'.$_SESSION['userPayload']['id'].'/')){
+        if (!file_exists('/var/www/html/resumes/'.$_SESSION['userPayload']['id'].'/')){
             
             // Make directory
-            mkdir('/var/www/html/development/resumes/'.$_SESSION['userPayload']['id'].'/', 0777, true);
+            mkdir('/var/www/html/resumes/'.$_SESSION['userPayload']['id'].'/', 0777, true);
             
         
         }else{
 
             // Otherwise, get all files in directory
-            $files = glob('/var/www/html/development/resumes/'.$_SESSION['userPayload']['id'].'/*');
+            $files = glob('/var/www/html/resumes/'.$_SESSION['userPayload']['id'].'/*');
             
             // Iterate through the files
             foreach($files as $file){
@@ -105,11 +103,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Upload the file with the new filename
         move_uploaded_file($_FILES["file"]["tmp_name"],
-        '/var/www/html/development/resumes/'.$_SESSION['userPayload']['id'].'/'.$timestamp.".".$fileExtension);
-        
+        '/var/www/html/resumes/'.$_SESSION['userPayload']['id'].'/'.$timestamp.".".$fileExtension);
+
         // Make the file unviewable from prying eyes
-        chmod('/var/www/html/development/resumes/'.$_SESSION['userPayload']['id'].'/'.$timestamp.".".$fileExtension, 0303);
+        chmod('/var/www/html/resumes/'.$_SESSION['userPayload']['id'].'/'.$timestamp.".".$fileExtension, 0303);
     
+
+
         // If we hit the else...
     }else if($_FILES["file"]["error"]){
 
