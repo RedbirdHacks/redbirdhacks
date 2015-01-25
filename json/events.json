@@ -1,0 +1,22 @@
+{  
+   "events":[  
+      {  
+         "date":"1424610000",
+         "time":"7:00 - 8:00",
+         "title":"Registration",
+         "description":"Please arrive at the front desk to get access to the event."
+      },
+      {  
+         "date":"1424613600",
+         "time":"8:00 - 9:00",
+         "title":"Event after Registration",
+         "description":"Second event."
+      },
+      {  
+         "date":"1424707200",
+         "time":"10:00 - 11:00",
+         "title":"Second day event",
+         "description":"Second day event."
+      }
+   ]
+}

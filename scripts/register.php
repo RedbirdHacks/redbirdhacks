@@ -51,8 +51,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $major = $_POST['major'];
     $year = $_POST['studentClass'];
     $grad_year = $_POST['gradYear'];
-    $is_volunteer = isset($_POST['isVolunteer']);
-    $is_hacker = isset($_POST['isHacker']);
+    $linkedIn = $_POST['linkedIn'];
+    $gitHub = $_POST['gitHub'];
 
     // Get the school ID
     $school_id = getSchoolId($_POST['school']);
@@ -133,16 +133,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         // And update their profile.
-        $result = updateProfile($google_id, $email_address, $given_name, $family_name, $gender, $school_id, $major, $year, $grad_year, $is_volunteer, $is_hacker, $filename);
+        $result = updateProfile($google_id, $email_address, $given_name, $family_name, $gender, $school_id, $major, $year, $grad_year, $linkedIn, $gitHub, $filename);
 
         // Else, if they are not on file...
     }else{
 
         // Create the profile.
-        $result = createProfile($google_id, $email_address, $given_name, $family_name, $gender, $school_id, $major, $year, $grad_year, $is_volunteer, $is_hacker, $filename);
+        $result = createProfile($google_id, $email_address, $given_name, $family_name, $gender, $school_id, $major, $year, $grad_year, $linkedIn, $gitHub, $filename);
     }
 
     // Return the result with errors
-    echo json_encode(array('changes' => $result, 'errors' => $error));
+    echo json_encode(array('changes' => $result, 'errors' => $error, 'debug' => error_get_last ()));
   
 }

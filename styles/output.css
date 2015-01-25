@@ -14,6 +14,12 @@ body, html {
   padding: 0px;
   max-width: 100%; }
 
+section.faqs a {
+  color: #e01b22; }
+
+div#sponsors.center a {
+  color: #fff; }
+
 button {
   background-color: #e01b22;
   height: 35px;
@@ -56,58 +62,48 @@ input {
   width: 400px;
   opacity: 0.8;
   border-radius: 4px;
-  margin-right: 5px;
   border: 1px solid #333;
   font-size: 1em;
-  padding-left: 10px; }
+  padding-left: 10px;
+  margin-top: 5px; }
+
+label {
+  display: block;
+  margin: 12px 0 0;
+  font-weight: 700;
+  float: left;
+  clear: left;
+  width: 200px;
+  text-align: right; }
+
+input, select {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+select {
+  height: 37px;
+  width: 22% !important;
+  opacity: 0.8;
+  border-radius: 4px;
+  border: 1px solid #333;
+  font-size: 1em;
+  padding-left: 10px;
+  margin-top: 5px; }
 
 p {
   font-size: 1.2em; }
+
+p#filename {
+  margin: 0;
+  margin-left: 10px; }
 
 section {
   clear: both;
   margin: 0; }
 
-#main-nav {
-  width: 100%;
-  height: 80px;
-  background-color: #fff;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-  #main-nav ul {
-    margin: 0;
-    padding: 0; }
-    #main-nav ul li {
-      margin: 0;
-      padding: 0 18px;
-      list-style: none;
-      float: left; }
-      #main-nav ul li.nav-top {
-        float: right; }
-        #main-nav ul li.nav-top a {
-          font-size: 1em; }
-      #main-nav ul li a {
-        font-size: 1.8em;
-        text-decoration: none;
-        line-height: 76px;
-        border-bottom: 4px solid transparent;
-        display: block; }
-        #main-nav ul li a, #main-nav ul li a:visited {
-          color: #e01b22; }
-        #main-nav ul li a:hover, #main-nav ul li a:active {
-          border-bottom-color: #e01b22; }
-
-#main-nav.affix {
-  position: fixed;
-  top: 0;
-  box-shadow: 0 1px 8px #333; }
-
-section#faq a {
-  color: #e01b22; }
-
-section#sponsors.center a {
-  color: #fff; }
+.hidden {
+  display: none; }
 
 #contact {
   height: 600px;
@@ -125,14 +121,17 @@ section#sponsors.center a {
 #email {
   margin: 10px; }
 
-#faq h2 {
+#registration {
   background-color: #e01b22;
   clear: both;
   color: #fff;
   padding: 75px 50px 75px 50px; }
 
-#faq div.faqs {
-  margin: 15px; }
+#faqs {
+  background-color: #e01b22;
+  clear: both;
+  color: #fff;
+  padding: 75px 50px 75px 50px; }
 
 #foot {
   height: 300px;
@@ -145,10 +144,7 @@ section#sponsors.center a {
   background-color: #e01b22;
   clear: both;
   color: #fff;
-  height: 100%; }
-
-#sponsors-cta {
-  padding: 155px 50px 75px 50px; }
+  padding: 75px 50px 75px 50px; }
 
 #scrollHint {
   position: absolute;
@@ -161,8 +157,8 @@ section#sponsors.center a {
   opacity: 0.6;
   border: 0px; }
 
-.hidden {
-  display: none; }
+input#file {
+  border: none; }
 
 .center {
   text-align: center; }
@@ -196,22 +192,20 @@ section#sponsors.center a {
   margin-right: auto;
   text-decoration: none; }
 
+.faqs {
+  margin: 15px; }
+
 .gray {
   color: #333; }
 
 .red {
   color: #e01b22; }
 
-.register {
-  color: #fff;
-  text-align: center;
-  font-size: 1.5em;
-  background-color: #e01b22;
-  padding: 7px 128px 7px 128px;
-  border-radius: 7px;
-  margin-left: auto;
-  margin-right: auto;
-  text-decoration: none; }
+.registration {
+  margin: 15px; }
+
+.faqs {
+  margin: 15px; }
 
 .row {
   width: 100%;
@@ -235,5 +229,15 @@ section#sponsors.center a {
   background-color: #fff;
   height: 200px;
   opacity: 0.4; }
+
+.left {
+  width: 40%;
+  float: left;
+  text-align: right; }
+
+.right {
+  width: 22%;
+  margin-left: 10px;
+  float: left; }
 
 /*# sourceMappingURL=output.css.map */

@@ -1,0 +1,60 @@
+{  
+   "mentors":[  
+      {  
+         "name":"Andrew Erickson",
+         "specialty":"Android Development",
+		 "contacts":[
+			{
+				"twitter":"",
+				"facebook":"http://facebook.com/test",
+				"email":"",
+				"linkedin":"",
+				"phone":"3095551234"
+			} 
+		 ],
+		 "description":"If you have any questions, feel free to contact me!"
+      },
+      {  
+         "name":"MJ Havens",
+         "specialty":"Android Development",
+		 "contacts":[
+			{
+				"twitter":"twitter.com/mj_havens",
+				"facebook":"facebook.com/mj.havens",
+				"email":"",
+				"linkedin":"www.linkedin.com/in/mjhavens",
+				"phone":""
+			} 
+		 ],
+		 "description":"If you have any questions, feel free to contact me!"
+      },
+	  {  
+         "name":"Tallyn Turnbow",
+         "specialty":"iOS Development",
+		 "contacts":[
+			{
+				"twitter":"",
+				"facebook":"",
+				"email":"",
+				"linkedin":"www.linkedin.com/in/testttttt",
+				"phone":"3095551234"
+			} 
+		 ],
+		 "description":"If you have any questions, feel free to contact me!"
+      },
+	  {  
+         "name":"Austin Savage",
+         "specialty":"Web Development",
+		 "contacts":[
+			{
+				"twitter":"",
+				"facebook":"http://www.facebook.com/egavasnitsua",
+				"email":"",
+				"linkedin":"",
+				"phone":""
+			} 
+		 ],
+		 "description":"If you have any questions, feel free to contact me!"
+      }
+   ]
+}

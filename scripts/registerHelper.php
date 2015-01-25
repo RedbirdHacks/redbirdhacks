@@ -31,8 +31,7 @@ function loadUser($google_id){
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stmt=$dbh->prepare("SELECT pro.email_address, pro.given_name, pro.family_name,
-        pro.gender, pro.school_id, pro.major, pro.year, pro.grad_year, pro.is_volunteer,
-        pro.is_hacker, pro.filename, sch.school_name
+        pro.gender, pro.school_id, pro.major, pro.year, pro.grad_year, pro.linkedIn, pro.gitHub, pro.filename, sch.school_name
         FROM PROFILE AS pro
             LEFT JOIN SCHOOL AS sch
             ON (pro.school_id = sch.school_id)
@@ -123,7 +122,7 @@ function addSchool($school_name){
     return $row;
 }
 
-function updateProfile($google_id, $email_address, $given_name, $family_name, $gender, $school_id, $major, $year, $grad_year, $is_volunteer, $is_hacker, $filename){
+function updateProfile($google_id, $email_address, $given_name, $family_name, $gender, $school_id, $major, $year, $grad_year, $linkedIn, $gitHub, $filename){
 
     try {
 
@@ -133,7 +132,7 @@ function updateProfile($google_id, $email_address, $given_name, $family_name, $g
         $stmt = $dbh->prepare("UPDATE PROFILE
         SET email_address=:email_address, given_name=:given_name, family_name=:family_name,
         gender=:gender, school_id=:school_id, major=:major, year=:year, grad_year=:grad_year,
-        is_volunteer=:is_volunteer, is_hacker=:is_hacker, filename=:filename
+        linkedIn=:linkedIn, gitHub=:gitHub, filename=:filename
         WHERE google_id=:google_id");
 
         $stmt->bindParam(':google_id', $google_id);
@@ -145,8 +144,8 @@ function updateProfile($google_id, $email_address, $given_name, $family_name, $g
         $stmt->bindParam(':major', $major);
         $stmt->bindParam(':year', $year);
         $stmt->bindParam(':grad_year', $grad_year);
-        $stmt->bindParam(':is_volunteer', $is_volunteer);
-        $stmt->bindParam(':is_hacker', $is_hacker);
+        $stmt->bindParam(':linkedIn', $linkedIn);
+        $stmt->bindParam(':gitHub', $gitHub);
         $stmt->bindParam(':filename', $filename);   
         $stmt->execute();
 
@@ -186,7 +185,7 @@ function clearFilename($google_id){
 
 }
 
-function createProfile($google_id, $email_address, $given_name, $family_name, $gender, $school_id, $major, $year, $grad_year, $is_volunteer, $is_hacker, $filename){
+function createProfile($google_id, $email_address, $given_name, $family_name, $gender, $school_id, $major, $year, $grad_year, $filename){
 
     try {
 
@@ -194,9 +193,9 @@ function createProfile($google_id, $email_address, $given_name, $family_name, $g
     
 
         $stmt = $dbh->prepare("INSERT INTO PROFILE(google_id, email_address, given_name, family_name,
-        gender, school_id, major, year, grad_year, is_volunteer, is_hacker, filename)
+        gender, school_id, major, year, grad_year, filename)
         VALUES (:google_id, :email_address, :given_name, :family_name, :gender, :school_id,
-        :major, :year, :grad_year, :is_volunteer, :is_hacker, :filename)");
+        :major, :year, :grad_year, :linkedIn, :gitHub, :filename)");
 
         $stmt->bindParam(':google_id', $google_id);
         $stmt->bindParam(':email_address', $email_address);
@@ -207,8 +206,8 @@ function createProfile($google_id, $email_address, $given_name, $family_name, $g
         $stmt->bindParam(':major', $major);
         $stmt->bindParam(':year', $year);
         $stmt->bindParam(':grad_year', $grad_year);
-        $stmt->bindParam(':is_volunteer', $is_volunteer);
-        $stmt->bindParam(':is_hacker', $is_hacker);
+        $stmt->bindParam(':linkedIn', $linkedIn);
+        $stmt->bindParam(':gitHub', $gitHub);
         $stmt->bindParam(':filename', $filename);   
         $stmt->execute();
 
