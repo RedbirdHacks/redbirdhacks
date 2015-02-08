@@ -1,0 +1,74 @@
+/* Redbird Red #c */
+body {
+	margin: 0;
+	/* padding-top: 70px; required for fixed nav */
+}
+h1, h2 {
+	text-align: center;
+	font-weight: normal;
+}
+h2 {
+	font-size: 4.0em;
+	vertical-align: middle;
+	color: #D90000;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+footer {
+	background-color: #D90000;
+	width: 100%;
+	height: 100px;
+}
+.navbar-default .navbar-nav>li>a {
+	color: #D90000;
+	font-size: 18px;
+}
+#contact {
+	background-color: #D90000;
+	width: 100%;
+	height: 600px;
+}
+#hero {
+	background-image: url("../images/isu-hero.jpg");
+	background-repeat: no-repeat;
+	background-color: #ccc;
+}
+
+#scrollHint {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+}
+
+#scrollHint img {
+  background-color: #f8f8f8;
+  opacity: 0.6;
+  border: 0px;
+}
+
+/* Sections */
+#sponsor {
+	width: 100%;
+	padding: 100px;
+}
+.logo {
+	margin-left:auto;
+	margin-right:auto;
+	text-align: center;
+	margin-top: 100px;
+}
+.navbar {
+	margin-bottom: 0;
+}
+.jumbotron {
+	height: 900px;
+}
+.red {
+	color: #D90000;
+}
