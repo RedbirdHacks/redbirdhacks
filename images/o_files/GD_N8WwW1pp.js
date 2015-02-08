@@ -1,7 +1,0 @@
-/*!CK:712591217!*//*1422244809,*/
-
-if (self.CavalryLogger) { CavalryLogger.start_js(["WtGPc"]); }
-
-__d("format",[],function(a,b,c,d,e,f){function g(h,i){i=Array.prototype.slice.call(arguments,1);return h.replace(/\{(\d+)\}/g,function(j,k){var l=i[Number(k)];return (l===null||l===(void 0))?'':l.toString();});}e.exports=g;},null);
-__d("CapitalizedNameMentionsStrategy",["DocumentMentionsRegex"],function(a,b,c,d,e,f,g){var h=1,i=new RegExp('(?:'+g.NAME+'{'+h+',})$'),j={findMentionableString:function(k){var l=i.exec(k);if(l!==null)return {matchingString:l[0],leadOffset:l[0].length};return null;}};e.exports=j;},null);
-__d("DynamicCSS",[],function(a,b,c,d,e,f){var g=null,h=[],i=0,j={add:function(k){if(!g){var l=document.head||document.getElementsByTagName('head')[0],m=document.createElement('style');m.type='text/css';l.insertBefore(m,l.firstChild);var n=document.styleSheets;for(var o=0,p=n.length;o<p;o++)if(n[o].cssRules||n[o].rules){g=n[o];break;}if(!g)return;}var q=h.length;if(g.addRule){var r=k.match(/(.+?)\s*\{(.+)\}/);g.addRule(r[1],r[2],q);}else g.insertRule(k,q);var s=i++;h.push(s);return {remove:function(){var t=h.indexOf(s);if(t>=0){if(g.removeRule){g.removeRule(t);}else g.deleteRule(t);h.splice(t,1);}}};}};e.exports=j;},null);
