@@ -10,65 +10,69 @@ h1, h2 {
 h2 {
 	font-size: 4.0em;
 	vertical-align: middle;
-	color: #D90000;
+	color: #000;
+}
+h4 {
+	font-size: 1.8em;
+	font-weight: bold;
+	color: #FDCA01;
 }
 img {
 	max-width: 100%;
 	height: auto;
 }
 footer {
-	background-color: #D90000;
+	text-align: center;
 	width: 100%;
-	height: 100px;
+	height: 50px;
+	padding: 10px;
 }
-.navbar-default .navbar-nav>li>a {
-	color: #D90000;
-	font-size: 18px;
-}
-#contact {
-	background-color: #D90000;
-	width: 100%;
-	height: 600px;
-}
+/* Sections */
 #hero {
 	background-image: url("../images/isu-hero.jpg");
+	background-position: top center;
 	background-repeat: no-repeat;
 	background-color: #ccc;
 }
-
-#scrollHint {
-  position: relative;
-  bottom: 0px;
-  width: 100%;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 200px;
+#social {
+	margin-left: auto;
+	margin-right: auto;
+	/*background-image: url('../images/gray.png');
+	background-repeat: repeat;*/
+	margin-top: 5px;
 }
-
-#scrollHint img {
-  background-color: #f8f8f8;
-  opacity: 0.6;
-  border: 0px;
-}
-
-/* Sections */
 #sponsor {
 	width: 100%;
-	padding: 100px;
+	padding: 50px;
+}
+.center {
+	text-align: center;
 }
 .logo {
+	padding: 15px;
+}
+.main {
+	width: 308px;
 	margin-left:auto;
 	margin-right:auto;
 	text-align: center;
-	margin-top: 100px;
+	margin-top: 40px;
 }
 .navbar {
 	margin-bottom: 0;
 }
+.navbar-default .navbar-nav>li>a {
+	color: #D90000;
+	font-size: 20px;
+	font-weight: normal;
+}
 .jumbotron {
-	height: 900px;
+	height: 850px;
 }
 .red {
 	color: #D90000;
 }
+.fb_iframe_widget iframe {
+	margin-left: 25px;
+}
+.twitter-follow-button[style] { vertical-align: text-bottom !important; margin-left: 35px; margin-top: 1px;}
