@@ -30,7 +30,7 @@ function loadUser($google_id){
         $dbh = new PDO(PDOCONNECTIONSTRING, PROFILEUSER, PROFILEPASSWORD);
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $stmt=$dbh->prepare("SELECT pro.email_address, pro.given_name, pro.family_name,
+        $stmt=$dbh->prepare("SELECT pro.email_address, pro.given_name, pro.family_name, pro.phone_number,
         pro.gender, pro.school_id, pro.major, pro.year, pro.grad_year, pro.linkedIn, pro.gitHub, pro.filename, sch.school_name
         FROM PROFILE AS pro
             LEFT JOIN SCHOOL AS sch
@@ -122,7 +122,7 @@ function addSchool($school_name){
     return $row;
 }
 
-function updateProfile($google_id, $email_address, $given_name, $family_name, $gender, $school_id, $major, $year, $grad_year, $linkedIn, $gitHub, $filename){
+function updateProfile($google_id, $email_address, $given_name, $family_name, $phone_number, $gender, $school_id, $major, $year, $grad_year, $linkedIn, $gitHub, $filename){
 
     try {
 
@@ -131,14 +131,15 @@ function updateProfile($google_id, $email_address, $given_name, $family_name, $g
 
         $stmt = $dbh->prepare("UPDATE PROFILE
         SET email_address=:email_address, given_name=:given_name, family_name=:family_name,
-        gender=:gender, school_id=:school_id, major=:major, year=:year, grad_year=:grad_year,
-        linkedIn=:linkedIn, gitHub=:gitHub, filename=:filename
+        phone_number=:phone_number, gender=:gender, school_id=:school_id, major=:major, year=:year,
+        grad_year=:grad_year, linkedIn=:linkedIn, gitHub=:gitHub, filename=:filename
         WHERE google_id=:google_id");
 
         $stmt->bindParam(':google_id', $google_id);
         $stmt->bindParam(':email_address', $email_address);
         $stmt->bindParam(':given_name', $given_name);
         $stmt->bindParam(':family_name', $family_name);
+        $stmt->bindParam(':phone_number', $phone_number);
         $stmt->bindParam(':gender', $gender);
         $stmt->bindParam(':school_id', $school_id);
         $stmt->bindParam(':major', $major);
@@ -185,14 +186,14 @@ function clearFilename($google_id){
 
 }
 
-function createProfile($google_id, $email_address, $given_name, $family_name, $gender, $school_id, $major, $year, $grad_year, $filename){
+function createProfile($google_id, $email_address, $given_name, $family_name, $phone_number ,$gender, $school_id, $major, $year, $grad_year, $filename){
 
     try {
 
         $dbh = new PDO(PDOCONNECTIONSTRING, PROFILEUSER, PROFILEPASSWORD);
     
 
-        $stmt = $dbh->prepare("INSERT INTO PROFILE(google_id, email_address, given_name, family_name,
+        $stmt = $dbh->prepare("INSERT INTO PROFILE(google_id, email_address, given_name, family_name, phone_number,
         gender, school_id, major, year, grad_year, filename)
         VALUES (:google_id, :email_address, :given_name, :family_name, :gender, :school_id,
         :major, :year, :grad_year, :linkedIn, :gitHub, :filename)");
@@ -201,6 +202,7 @@ function createProfile($google_id, $email_address, $given_name, $family_name, $g
         $stmt->bindParam(':email_address', $email_address);
         $stmt->bindParam(':given_name', $given_name);
         $stmt->bindParam(':family_name', $family_name);
+        $stmt->bindParam(':phone_number', $phone_number);
         $stmt->bindParam(':gender', $gender);
         $stmt->bindParam(':school_id', $school_id);
         $stmt->bindParam(':major', $major);

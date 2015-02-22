@@ -13,6 +13,7 @@ function populateDetails(){
         $("input#firstName").val(user.given_name);
         $("input#lastName").val(user.family_name);
         $("input#emailAddress").val(user.email_address);
+        $("input#phoneNumber").val(user.phone_number);
         $("select#gender").val(user.gender);
         $("input#school").val(user.school_name);
         $("input#major").val(user.major);

@@ -88,6 +88,9 @@ if($auth->checkRedirectCode()){
                     <label for="emailAddress" class="left">Email Address: </label>
                         <input type="text" id="emailAddress" class="right" name="emailAddress" required><br>
 
+                    <label for="phoneNumber" class="left">Phone Number: </label>
+                        <input type="text" id="phoneNumber" class="right" name="phoneNumber" maxlength="20" required><br>
+
                     <label for="gender" class="left">Gender: </label>
 
                     <select id="gender" name="gender" class="right" size=1 required>
