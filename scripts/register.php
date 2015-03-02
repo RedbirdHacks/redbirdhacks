@@ -45,6 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // First let's handle the easy things
     $google_id = $_SESSION['userPayload']['id'];
     $email_address = $_POST['emailAddress'];
+    $phone_number = preg_replace('/\D/', '', $_POST['phoneNumber']);
     $given_name = $_POST['firstName'];
     $family_name = $_POST['lastName'];
     $gender = $_POST['gender'];
@@ -128,18 +129,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if(!$filename){
 
             // Retain the filename on record.
-            $filename = $user['filename'];
+          //  $filename = $user['filename'];
 
         }
 
         // And update their profile.
-        $result = updateProfile($google_id, $email_address, $given_name, $family_name, $gender, $school_id, $major, $year, $grad_year, $linkedIn, $gitHub, $filename);
+        $result = updateProfile($google_id, $email_address, $given_name, $family_name, $phone_number, $gender, $school_id, $major, $year, $grad_year, $linkedIn, $gitHub, $filename);
 
         // Else, if they are not on file...
     }else{
 
         // Create the profile.
-        $result = createProfile($google_id, $email_address, $given_name, $family_name, $gender, $school_id, $major, $year, $grad_year, $linkedIn, $gitHub, $filename);
+        $result = createProfile($google_id, $email_address, $given_name, $family_name, $phone_number, $gender, $school_id, $major, $year, $grad_year, $linkedIn, $gitHub, $filename);
     }
 
     // Return the result with errors
