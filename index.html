@@ -28,6 +28,8 @@
 
     <!-- Bootstrap -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+    <link href="styles/output.css" rel="stylesheet">
     <link href="styles/home.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -64,12 +66,12 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </button>
+      </button> -->
       <a class="navbar-brand"><span class="red" style="font-size: 20px;">Redbird<span style="color: #222;">Hacks</span></span></a>
     </div>
 
@@ -120,9 +122,78 @@
   	</div>
   	</article>
 	</section>
-  
+
+  <!-- Login Button -->
+  <section id="login">
+    <p><a href="#"><img src="images/googlesignin.png"></a></p>
+  </section>
+
+  <!-- Registration Form -->
+  <section id="register">
+      <a href="app/logout.php">Sign out</a>
+        <form id="registerForm">
+          <div style="width:100%; display:inline-block; margin:0px auto;">
+                <h2><span class="gray">Register</span></h2>
+                    <label for="firstName" class="left">First name: </label>
+                        <input type="text" id="firstName" class="right" name="firstName" required><br>
+
+                    <label for="lastName" class="left">Last name: </label>
+                        <input type="text" id="lastName" class="right" name="lastName" required><br>
+
+                    <label for="emailAddress" class="left">Email Address: </label>
+                        <input type="text" id="emailAddress" class="right" name="emailAddress" required><br>
+
+                    <label for="phoneNumber" class="left">Phone Number: </label>
+                        <input type="text" id="phoneNumber" class="right" name="phoneNumber" maxlength="20" required><br>
+
+                    <label for="gender" class="left">Gender: </label>
+
+                    <select id="gender" name="gender" class="right" size=1 required>
+                        
+                        <option value="u">Unspecified</option>
+                        <option value="f">Female</option>
+                        <option value="m">Male</option>
+
+                    </select><br>
+
+                    <label for="school" class="left">School: </label>
+                        <input type="text" id="school" class="right" name="school" required><br>
+                        
+                    <label for="major" class="left">Major: </label>
+                        <input type="text" id="major" name="major" class="right" required><br>
+                    
+                    <label for="class" class="left">Student Classification: </label>
+                        <select id="class" class="right" name="studentClass" size="1" required>
+                            <option value="freshman">Freshman</option>
+                            <option value="sophomore">Sophomore</option>
+                            <option value="junior">Junior</option>
+                            <option value="senior">Senior</option>
+                            <option value="graduate">Graduate</option>
+                        </select><br>
+
+                    <label for="gradYear" class="left">Estimated Graduation Year: </label>
+                        <input type="number" id="gradYear" name="gradYear" class="right" size="4" min="2014" max="2100" required><br>
+        
+          <label for="linkedIn" class="left">*LinkedIn Address: </label>
+                    <input type="text" id="linkedIn" name="linkedIn" class="right" placeholder="https://www.linkedin.com/in/reidhoffman" required><br>
+
+                    <label for="GitHub" class="left">*GitHub Address: </label>
+                    <input type="text" id="gitHub" name="gitHub" class="right" placeholder="https://github.com/defunkt" required><br>
+
+        </div>
+
+                    <span id="filename" class="hidden" aria-hidden="true"><label for="filename" class="left">Previously Uploaded: </label><p id="filename" class="right" style="margin-top:10px"> <a href="#" id="deleteResume">Delete</a></p></span>
+ 
+                    <label for="newResume" class="left">*Upload New Resume (2MB): </label><input style="margin-top:10px;" class="right" type="file" id="file" name="file"></p>
+                    <br>
+                    <br>
+                    <p class="center">*Optional information will be supplied to recruiters for potential job and internship opportunities.</p>
+                <label for="spacer" class="left"></label><input class="right" type="submit" id="submit">
+            </form>
+  </section>
 
 	<section id="about">
+  <h2>About</h2>
 	<!-- Grid System -->
 	<div class="container">
 	    <div class="row grid">
@@ -140,7 +211,7 @@
 
 	        <div class="col-sm-6 col-md-4 col-lg-3">
             <h3>When and where is RedbirdHacks?</h3>
-            <p>The weekend of April 24th-26th located on Illinois State University's campus, CVA 110. Registration opens late February.</p>
+            <p>The weekend of April 24th-26th located on Illinois State University's campus, CVA 110. Accepted applicants will be notified in April.</p>
           </div>
 
 	        <div class="clearfix visible-md-block"></div>
@@ -161,7 +232,7 @@
 
 	        <div class="col-sm-6 col-md-4 col-lg-3">
             <h3>How do I get into RedbirdHacks?</h3>
-				    <p>Simply sign up with your email above, and we'll let you know when registration opens!</p>
+				    <p>Register to participate and applicants will be notified of their acceptance in early April. Because space is limited, we will be notifying participants for RSVP and waitlist status.</p>
           </div>
 
 	        <div class="clearfix visible-sm-block"></div>
@@ -178,12 +249,12 @@
 	        <div class="clearfix visible-lg-block"></div>
 	        <div class="col-sm-6 col-md-4 col-lg-3">
             <h3>How much does it cost?</h3>
-				    <p>Admission is free. We will provide your Wi-Fi, meals, caffeine, swag, and workspace for the entire weekend. Yes, it's awesome. We know.</p>
+				    <p>Admission is free. We will provide your WiFi, meals, caffeine, swag, and workspace for the entire weekend. Yes, it's awesome. We know.</p>
           </div>
 	        <div class="clearfix visible-md-block"></div>
 	        <div class="col-sm-6 col-md-4 col-lg-3">
             <h3>What are the rules?</h3>
-				    <p>No alcohol, no weapons or firearms, and no bad attitudes. Check out our Code of Conduct for event policies.</p>
+				    <p>No alcohol, no weapons or firearms, and no bad attitudes.</p>
           </div>
 	        <div class="clearfix visible-sm-block"></div>
 	        <div class="col-sm-6 col-md-4 col-lg-3">
@@ -218,11 +289,15 @@
   </footer>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="scripts/parallax.js"></script>
 		<script src="scripts/notify.min.js"></script>
 		<script src="scripts/email.js"></script>
-		<script src="scripts/scrollHint.js"></script>
+		<script src="scripts/register.js"></script>
+    <script src="scripts/scrollHint.js"></script>
+
+
   </body>
 </html>
