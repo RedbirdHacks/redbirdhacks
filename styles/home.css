@@ -11,6 +11,7 @@ h2 {
 	font-size: 4.0em;
 	vertical-align: middle;
 	color: #000;
+	padding-bottom: 10px;
 }
 h4 {
 	font-size: 1.8em;
@@ -28,6 +29,9 @@ footer {
 	padding: 10px;
 }
 /* Sections */
+#about {
+	margin-top: 50px;
+}
 #hero {
 	background-image: url("../images/isu-hero.jpg");
 	background-position: top center;
@@ -44,6 +48,15 @@ footer {
 #sponsor {
 	width: 100%;
 	padding: 50px;
+}
+.btn-primary {
+	background-color: #D90000; 
+	border-color: #D90000;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+	background-color: #D90000; 
+	border-color: #D90000;
 }
 .center {
 	text-align: center;
@@ -67,7 +80,7 @@ footer {
 	font-weight: normal;
 }
 .jumbotron {
-	height: 800px;
+	height: 800px !important;
 }
 .red {
 	color: #D90000;

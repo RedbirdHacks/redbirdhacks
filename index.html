@@ -79,6 +79,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="#about">About</a></li>
+        <li><a href="#register">Register</a></li>
         <li><a href="#sponsor">Sponsor</a></li>
         <li><a href="mailto:contact@redbirdhacks.org">Contact</a></li>
       </ul>
@@ -124,16 +125,18 @@
 	</section>
 
   <!-- Login Button -->
-  <section id="login">
-    <p><a href="#"><img src="images/googlesignin.png"></a></p>
+  <section id="register">
+    <h2>Register</h2>
+    <div style="text-align: center;">
+      <a href="#"><img src="images/googlesignin.png" alt="Google sign in"></a>
+    </div>
   </section>
 
   <!-- Registration Form -->
   <section id="register">
-      <a href="app/logout.php">Sign out</a>
         <form id="registerForm">
           <div style="width:100%; display:inline-block; margin:0px auto;">
-                <h2><span class="gray">Register</span></h2>
+                <h2>Register</h2>
                     <label for="firstName" class="left">First name: </label>
                         <input type="text" id="firstName" class="right" name="firstName" required><br>
 
@@ -182,13 +185,24 @@
 
         </div>
 
-                    <span id="filename" class="hidden" aria-hidden="true"><label for="filename" class="left">Previously Uploaded: </label><p id="filename" class="right" style="margin-top:10px"> <a href="#" id="deleteResume">Delete</a></p></span>
+                    <span id="filename" class="hidden" aria-hidden="true"><label for="filename" class="left">Previously Uploaded: </label>
+                    <p id="filename" class="right" style="margin-top:10px"><a href="#" id="deleteResume">Delete</a></p></span>
  
-                    <label for="newResume" class="left">*Upload New Resume (2MB): </label><input style="margin-top:10px;" class="right" type="file" id="file" name="file"></p>
-                    <br>
-                    <br>
-                    <p class="center">*Optional information will be supplied to recruiters for potential job and internship opportunities.</p>
-                <label for="spacer" class="left"></label><input class="right" type="submit" id="submit">
+                    <label for="newResume" class="left">*Upload New Resume (2MB): </label>
+                    <input style="margin-top:10px;" class="right" type="file" id="file" name="file">
+
+                  
+                    <p class="center" style="display: block; width: 25%; margin-left: auto; margin-right: auto;"><br><br>*Optional information will be supplied to recruiters for potential job and internship opportunities.</p>
+
+                    <!-- <input type="submit" id="submit" style="margin-left: auto; margin-right:auto;"> -->
+
+                    <div style="margin-left: auto; margin-right: auto; width: 100%; display: block; text-align: center;">
+                      <button type="submit" id="submit" class="btn btn-primary" style="width: 11%; margin-left: 32px;">Submit</button>
+                      <button type="button" class="btn btn-primary" style="width: 11%;">Sign Out</button>
+                    </div>
+                    
+                    <!-- <a href="app/logout.php">Sign out</a> -->
+
             </form>
   </section>
 
@@ -263,7 +277,7 @@
           </div>
 	        <div class="col-sm-6 col-md-4 col-lg-3">
             <h3>What can I make?</h3>
-              <p>Anything you can come up with! You have 36 hours to make anything from websites, desktop apps, mobile apps, or even traditional software.  All coding must be done during the hackathon, but feel free to use APIs and open source libraries. If you hack it, we will judge it based on creativity, technical difficulty, usefulness, and overall awesomeness.<p/>
+              <p>Anything you can come up with! You have 36 hours to make anything from websites, desktop apps, mobile apps, or even traditional software.  All coding must be done during the hackathon, but feel free to use APIs and open source libraries. If you hack it, we will judge it based on creativity, technical difficulty, usefulness, and overall awesomeness.</p>
           </div>
 	    </div>
 	</div>
