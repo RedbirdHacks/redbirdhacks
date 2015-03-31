@@ -6,6 +6,7 @@ body {
 h1, h2 {
 	text-align: center;
 	font-weight: normal;
+	font-weight: lighter;
 }
 h2 {
 	font-size: 4.0em;
@@ -13,10 +14,13 @@ h2 {
 	color: #000;
 	padding-bottom: 10px;
 }
+h3.speaker {
+	font-weight: normal;
+}
 h4 {
-	font-size: 2.0em;
+	font-size: 2.2em;
 	font-weight: bold;
-	color: #FDCA01;
+	color: #000;
 }
 img {
 	max-width: 100%;
@@ -46,7 +50,7 @@ footer {
 	margin-top: 5px;
 }
 #speakers {
-
+	margin-top: 50px;
 }
 #sponsor {
 	width: 100%;
@@ -79,7 +83,7 @@ footer {
 .navbar-default .navbar-nav>li>a {
 	color: #D90000;
 	font-size: 20px;
-	font-weight: normal;
+	font-weight: lighter;
 }
 .jumbotron {
 	height: 800px !important;
@@ -89,7 +93,7 @@ footer {
 }
 .speaker {
 	text-align: center;
-	width: 30%;
+	width: 350px;
 	margin-left: auto;
 	margin-right: auto;
 }
