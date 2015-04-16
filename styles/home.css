@@ -3,7 +3,7 @@ body {
 	margin: 0;
 	/* padding-top: 70px; required for fixed nav */
 }
-h1, h2 {
+h1, h2, h5 {
 	text-align: center;
 	font-weight: normal;
 	font-weight: lighter;
@@ -13,6 +13,9 @@ h2 {
 	vertical-align: middle;
 	color: #000;
 	padding-bottom: 10px;
+}
+h3 {
+	font-size: 1.75em;
 }
 h3.speaker {
 	font-weight: normal;
