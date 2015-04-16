@@ -52,6 +52,9 @@ footer {
 #keynote {
 	margin-top: 50px;
 }
+#schedule {
+	padding: 50px;
+}
 #sponsor {
 	width: 100%;
 	padding: 50px;
@@ -64,8 +67,9 @@ footer {
 	background-color: #D90000; 
 	border-color: #D90000;
 }
-.col-md-6 {
-	padding: 25px 10px 25px 10px;
+.row {
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 .center {
 	text-align: center;
@@ -85,8 +89,15 @@ footer {
 	font-size: 20px;
 	font-weight: lighter;
 }
+.note {
+	margin-top: 15px;
+}
 .jumbotron {
 	height: 800px !important;
+}
+.location {
+	display: block;
+	font-size: 0.75em;
 }
 .red {
 	color: #D90000;
@@ -103,6 +114,12 @@ footer {
 	margin-right: auto;
 	text-align: center;
 }
+.time {
+	text-align: right !important;
+	width: 75%;
+  margin-left: 10px;
+  float: left;
+}
 .fb_iframe_widget iframe {
 	margin-left: 25px;
 }
@@ -110,19 +127,24 @@ footer {
 
 /* TABLE STYLES */
 .schedule {
-	border: 1px solid #000;
-	width: 70%;
 	margin-left: auto;
 	margin-right: auto;
-	font-size: 1.5em;
-}
-table.schedule th {
-
+	font-size: 1.0em;
 }
 table.schedule td {
-	
+	/*background-color: #c0c0c0;*/
+	border-left: 5px solid #fff;
+	font-size: 1.7em;
+	font-weight: normal;
 }
-
+table.schedule td.time {
+	/*background-color: pink;*/
+	font-weight: bold;
+}
+table.schedule th {
+	/*background-color: green;*/
+	width: 33%;
+}
 
 
 /* MEDIA QUERIES */

@@ -198,13 +198,15 @@ input#file {
 .faqs {
   margin: 15px; }
 
+/* May have been used for the registration form
+   Bug fix - removed this code to fix off-centered sponsor logos 
 .row {
   width: 100%;
   clear: both;
   display: table-row;
   margin-left: auto;
-  margin-right: auto; }
-
+  margin-right: auto; }*/
+  
 .sponsors {
   margin: 20px;
   display: block; }
