@@ -1,6 +1,7 @@
 /* Redbird Red #c */
 body {
 	margin: 0;
+	font-size: 1.75em;
 	/* padding-top: 70px; required for fixed nav */
 }
 h1, h2, h5 {
@@ -9,19 +10,19 @@ h1, h2, h5 {
 	font-weight: lighter;
 }
 h2 {
-	font-size: 4.0em;
+	font-size: 3.0em;
 	vertical-align: middle;
 	color: #000;
 	padding-bottom: 10px;
 }
 h3 {
-	font-size: 1.75em;
+	font-size: 1.5em;
 }
 h3.speaker {
 	font-weight: normal;
 }
 h4 {
-	font-size: 2.2em;
+	font-size: 1.75em;
 	font-weight: bold;
 	color: #000;
 }
@@ -37,7 +38,7 @@ footer {
 }
 /* Sections */
 #about {
-	margin-top: 50px;
+	/*margin-top: 50px;*/
 }
 #hero {
 	background-image: url("../images/isu-hero.jpg");
@@ -52,15 +53,21 @@ footer {
 	background-repeat: repeat;*/
 	margin-top: 5px;
 }
+#guide {
+	padding: 0px 50px 50px 50px;
+}
 #keynote {
 	margin-top: 50px;
+}
+#register {
+	padding-bottom: 50px;
 }
 #schedule {
 	padding: 50px;
 }
 #sponsor {
 	width: 100%;
-	padding: 50px;
+	padding: 50px 50px 0px 50px;
 }
 .btn-primary {
 	background-color: #D90000; 
@@ -111,12 +118,6 @@ footer {
 	margin-left: auto;
 	margin-right: auto;
 }
-.table {
-	width: 50%;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-}
 .time {
 	text-align: right !important;
 	width: 75%;
@@ -130,25 +131,34 @@ footer {
 
 /* TABLE STYLES */
 .schedule {
-	margin-left: auto;
-	margin-right: auto;
+	/*margin-left: auto;
+	margin-right: auto;*/
 	font-size: 1.0em;
 }
-table.schedule td {
+table td {
 	/*background-color: #c0c0c0;*/
-	border-left: 5px solid #fff;
-	font-size: 1.7em;
+	/*border-left: 5px solid #fff;*/
+	border-style: none !important;
+	font-size: 1.3em;
 	font-weight: normal;
 }
-table.schedule td.time {
+table th {
+	border-style: none !important;
+}
+table td.time {
 	/*background-color: pink;*/
 	font-weight: bold;
 }
-table.schedule th {
+table th {
 	/*background-color: green;*/
-	width: 33%;
+	/*width: 33%;*/
 }
-
+/*.table {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}*/
 
 /* MEDIA QUERIES */
 /* Smartphones (portrait and landscape) ----------- */
@@ -234,5 +244,10 @@ only screen and (min-device-pixel-ratio : 1.5) {
 		margin-left: auto;
 		margin-right: auto;
 		text-align: center;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.table {
+		text-align: left;
 	}
 }
